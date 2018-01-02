@@ -12,9 +12,18 @@ FastClick.attach(document.body)
 
 Vue.config.productionTip = false
 
-import  { LoadingPlugin } from 'vux'
-Vue.use(LoadingPlugin)
+import  { LoadingPlugin, WechatPlugin, AlertPlugin, ToastPlugin, ConfirmPlugin } from 'vux'
 
+Vue.use(LoadingPlugin)
+Vue.use(WechatPlugin)
+Vue.use(AlertPlugin)
+Vue.use(ToastPlugin)
+Vue.use(ConfirmPlugin)
+
+import VueLazyLoad from 'vue-lazyload'
+import VueTouch from 'vue-touch'
+Vue.use(VueLazyLoad)
+Vue.use(VueTouch, { name: 'v-touch' })
 
 import global_ from './components/Global'
 Vue.prototype.GLOBAL = global_
